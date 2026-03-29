@@ -1,66 +1,83 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import styles from './page.module.css';
+
+export const metadata = {
+  title: 'Haliflocks — Coming Soon',
+  description: 'A Halifax birding community. Coming soon.',
+};
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
+    <main className={styles.body}>
+
+      {/* Background chevron pattern */}
+      <div className={styles.bgPattern}>
+        <svg viewBox="0 0 200 200" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="chevrons" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
+              <polyline points="0,40 40,0 80,40" fill="none" stroke="#F5C200" strokeWidth="2.5" />
+              <polyline points="0,80 40,40 80,80" fill="none" stroke="#F5C200" strokeWidth="2.5" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#chevrons)" />
+        </svg>
+      </div>
+
+      {/* Glow */}
+      <div className={styles.glow} />
+
+      {/* Flying birds */}
+      <div className={styles.birds}>
+        <svg viewBox="0 0 40 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 10 Q10 0 20 10 Q30 0 40 10" stroke="#FFF3B0" strokeWidth="2.5" strokeLinecap="round" />
+        </svg>
+        <svg viewBox="0 0 40 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 10 Q10 0 20 10 Q30 0 40 10" stroke="#FFF3B0" strokeWidth="2.5" strokeLinecap="round" />
+        </svg>
+        <svg viewBox="0 0 40 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 10 Q10 0 20 10 Q30 0 40 10" stroke="#FFF3B0" strokeWidth="2.5" strokeLinecap="round" />
+        </svg>
+      </div>
+
+      {/* Main content */}
+      <div className={styles.container}>
+
+        <div className={styles.wordmark}>
+          <h1>Haliflocks</h1>
+          <p className={styles.sub}>Halifax Birding Community</p>
+        </div>
+
+        <div className={styles.divider} />
+
+        <div className={styles.message}>
           <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
+            Something <strong>wonderful</strong> is taking flight.<br />
+            Our site is on its way — in the meantime, follow us on Instagram
+            for bird sightings, events, and community updates.
           </p>
         </div>
-        <div className={styles.ctas}>
+
+        <div className={styles.cta}>
           <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+            href="https://www.instagram.com/haliflocks/"
             target="_blank"
             rel="noopener noreferrer"
+            className={styles.btnInstagram}
           >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="#1A4FA0" strokeWidth="2" />
+              <circle cx="12" cy="12" r="4" stroke="#1A4FA0" strokeWidth="2" />
+              <circle cx="17.5" cy="6.5" r="1.2" fill="#1A4FA0" />
+            </svg>
+            Follow us on Instagram
           </a>
         </div>
-      </main>
-    </div>
+
+      </div>
+
+      <footer className={styles.footer}>
+        Halifax, Nova Scotia &mdash; Est. 2025
+      </footer>
+
+    </main>
   );
 }
