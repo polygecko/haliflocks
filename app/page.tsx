@@ -1,7 +1,8 @@
+import Image from 'next/image';
 import styles from './page.module.css';
 
 export const metadata = {
-  title: 'Haliflocks — Coming Soon',
+  title: 'HaliFlocks — Coming Soon',
   description: 'A Halifax birding community. Coming soon.',
 };
 
@@ -41,8 +42,18 @@ export default function Home() {
       {/* Main content */}
       <div className={styles.container}>
 
+        <div className={styles.logoWrap}>
+          <Image
+            src="/final-logo-transparent.png"
+            alt="HaliFlocks"
+            width={360}
+            height={360}
+            priority
+            className={styles.logo}
+          />
+        </div>
+
         <div className={styles.wordmark}>
-          <h1>Haliflocks</h1>
           <p className={styles.sub}>Halifax Birding Community</p>
         </div>
 
