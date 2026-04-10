@@ -54,7 +54,7 @@ export default function Home() {
         </div>
 
         <div className={styles.wordmark}>
-          <p className={styles.sub}>Halifax Birding Community</p>
+          <p className={styles.sub}>a hub for the growing birder community of Halifax and beyond</p>
         </div>
 
         <div className={styles.divider} />
@@ -81,6 +81,15 @@ export default function Home() {
             </svg>
             Follow us on Instagram
           </a>
+
+          <span className={styles.btnContact}>
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="18" height="18">
+              <rect x="2" y="4" width="20" height="16" rx="3" stroke="currentColor" strokeWidth="1.8" />
+              <path d="M2 8l10 7 10-7" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+            </svg>
+            Contact Us
+            <span className={styles.contactTooltip}>Email coming soon</span>
+          </span>
         </div>
 
       </div>
