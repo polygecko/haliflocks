@@ -5,7 +5,7 @@ import styles from './Navbar.module.css';
 
 const links = [
   { label: 'Home',    href: '/',        live: true  },
-  { label: 'Events',  href: '/events',  live: false },
+  { label: 'Tours & Events', href: '/tours-events', live: true  },
   { label: 'Games',   href: '/games',   live: false },
   { label: 'Contact', href: '/contact', live: false },
 ];

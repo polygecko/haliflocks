@@ -1,0 +1,146 @@
+/* ─── Page shell ────────────────────────────────────────────── */
+.body {
+  --yellow: #F5C200;
+  --yellow-dark: #D4A800;
+  --yellow-light: #FFF3B0;
+  --blue: #1A4FA0;
+  --blue-dark: #0F2E6B;
+  --blue-mid: #2563c4;
+  --white: #FDFAF0;
+
+  background-color: var(--blue-dark);
+  color: var(--white);
+  font-family: var(--font-dm-sans), sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 2rem 4rem;
+}
+
+/* ─── Glow ──────────────────────────────────────────────────── */
+.glow {
+  position: fixed;
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(245, 194, 0, 0.12) 0%, transparent 70%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ─── Content wrapper ───────────────────────────────────────── */
+.container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 760px;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  animation: fadeUp 0.7s ease both;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── Page heading ──────────────────────────────────────────── */
+.heading {
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-size: clamp(1.8rem, 5vw, 2.75rem);
+  font-weight: 700;
+  color: var(--yellow);
+  letter-spacing: 0.02em;
+}
+
+/* ─── Toggle ────────────────────────────────────────────────── */
+.toggleWrap {
+  display: inline-flex;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(245, 194, 0, 0.2);
+  border-radius: 10px;
+  padding: 4px;
+  gap: 4px;
+}
+
+.toggleBtn {
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 0.6rem 1.4rem;
+  border-radius: 7px;
+  border: none;
+  background: transparent;
+  color: rgba(253, 250, 240, 0.55);
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.toggleBtn:hover {
+  color: rgba(253, 250, 240, 0.85);
+}
+
+.toggleBtnActive {
+  background: var(--yellow);
+  color: var(--blue-dark);
+}
+
+.toggleBtnActive:hover {
+  color: var(--blue-dark);
+  background: #FFD93D;
+}
+
+/* ─── Panel ─────────────────────────────────────────────────── */
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  animation: fadeUp 0.4s ease both;
+}
+
+/* ─── Cards ─────────────────────────────────────────────────── */
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(245, 194, 0, 0.15);
+  border-radius: 12px;
+  padding: 1.75rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.cardTitle {
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--yellow);
+}
+
+.cardMeta {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(253, 250, 240, 0.4);
+}
+
+.cardBody {
+  font-size: 0.975rem;
+  font-weight: 300;
+  line-height: 1.75;
+  color: rgba(253, 250, 240, 0.75);
+}
+
+.divider {
+  width: 48px;
+  height: 2px;
+  background: var(--yellow);
+  opacity: 0.35;
+  border-radius: 2px;
+}

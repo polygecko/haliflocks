@@ -208,36 +208,18 @@
   text-decoration: none;
   padding: 0.85rem 1.75rem;
   border-radius: 6px;
-  border: 1.5px solid rgba(253, 250, 240, 0.25);
-  cursor: default;
-  opacity: 0.6;
-  transition: opacity 0.2s ease;
-  position: relative;
+  border: 1.5px solid rgba(253, 250, 240, 0.35);
+  transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
 }
 
-.btnContact:hover .contactTooltip {
-  opacity: 1;
+.btnContact:hover {
+  border-color: rgba(253, 250, 240, 0.7);
+  background: rgba(253, 250, 240, 0.06);
+  transform: translateY(-2px);
+}
+
+.btnContact:active {
   transform: translateY(0);
-}
-
-.contactTooltip {
-  position: absolute;
-  bottom: calc(100% + 10px);
-  left: 50%;
-  transform: translateX(-50%) translateY(4px);
-  background: rgba(15, 46, 107, 0.95);
-  border: 1px solid rgba(245, 194, 0, 0.3);
-  color: var(--yellow-light);
-  font-size: 0.72rem;
-  font-weight: 400;
-  letter-spacing: 0.02em;
-  text-transform: none;
-  white-space: nowrap;
-  padding: 0.4rem 0.75rem;
-  border-radius: 4px;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
 /* ─── Footer ────────────────────────────────────────────────── */
