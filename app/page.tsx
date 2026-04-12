@@ -82,14 +82,13 @@ export default function Home() {
             Follow us on Instagram
           </a>
 
-          <span className={styles.btnContact}>
+          <a href="mailto:tours@haliflocks.ca" className={styles.btnContact}>
             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="18" height="18">
               <rect x="2" y="4" width="20" height="16" rx="3" stroke="currentColor" strokeWidth="1.8" />
               <path d="M2 8l10 7 10-7" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
             </svg>
             Contact Us
-            <span className={styles.contactTooltip}>Email coming soon</span>
-          </span>
+          </a>
         </div>
 
       </div>
