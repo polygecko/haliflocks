@@ -62,33 +62,8 @@ export default function Home() {
         <div className={styles.message}>
           <p>
             Something <strong>wonderful</strong> is taking flight.<br />
-            Our site is on its way — in the meantime, follow us on Instagram
-            for bird sightings, events, and community updates.
+            Our site is on its way — check back soon.
           </p>
-        </div>
-
-        <div className={styles.cta}>
-          <a
-            href="https://www.instagram.com/haliflocks/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.btnInstagram}
-          >
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="#1A4FA0" strokeWidth="2" />
-              <circle cx="12" cy="12" r="4" stroke="#1A4FA0" strokeWidth="2" />
-              <circle cx="17.5" cy="6.5" r="1.2" fill="#1A4FA0" />
-            </svg>
-            Follow us on Instagram
-          </a>
-
-          <a href="mailto:tours@haliflocks.ca" className={styles.btnContact}>
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="18" height="18">
-              <rect x="2" y="4" width="20" height="16" rx="3" stroke="currentColor" strokeWidth="1.8" />
-              <path d="M2 8l10 7 10-7" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-            </svg>
-            Contact Us
-          </a>
         </div>
 
       </div>

@@ -7,7 +7,7 @@ const links = [
   { label: 'Home',    href: '/',        live: true  },
   { label: 'Tours & Events', href: '/tours-events', live: true  },
   { label: 'Games',   href: '/games',   live: false },
-  { label: 'Contact', href: '/contact', live: false },
+  { label: 'Contact', href: '/contact', live: true  },
 ];
 
 export default function Navbar() {
@@ -38,8 +38,9 @@ export default function Navbar() {
                 {label}
               </a>
             ) : (
-              <span className={`${styles.link} ${styles.linkDisabled}`} title="Coming soon">
+              <span className={`${styles.link} ${styles.linkDisabled}`}>
                 {label}
+                <span className={styles.tooltip}>Coming soon</span>
               </span>
             )}
           </li>

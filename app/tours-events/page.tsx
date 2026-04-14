@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import styles from './page.module.css';
 
-const guidedTours = [
+const scheduledTours = [
   {
     title: 'Dawn Chorus Walk — Point Pleasant Park',
     meta: 'Every Saturday · 6:00 AM · 2 hrs',
@@ -21,7 +21,7 @@ const guidedTours = [
   },
 ];
 
-const otherEvents = [
+const personalizedTours = [
   {
     title: 'Spring Identification Workshop',
     meta: 'April 26 · 2:00 PM · Halifax Library',
@@ -39,11 +39,11 @@ const otherEvents = [
   },
 ];
 
-type Tab = 'tours' | 'events';
+type Tab = 'scheduled' | 'personalized';
 
 export default function ToursEventsPage() {
-  const [tab, setTab] = useState<Tab>('tours');
-  const items = tab === 'tours' ? guidedTours : otherEvents;
+  const [tab, setTab] = useState<Tab>('scheduled');
+  const items = tab === 'scheduled' ? scheduledTours : personalizedTours;
 
   return (
     <main className={styles.body}>
@@ -58,19 +58,19 @@ export default function ToursEventsPage() {
         <div className={styles.toggleWrap} role="tablist">
           <button
             role="tab"
-            aria-selected={tab === 'tours'}
-            className={`${styles.toggleBtn} ${tab === 'tours' ? styles.toggleBtnActive : ''}`}
-            onClick={() => setTab('tours')}
+            aria-selected={tab === 'scheduled'}
+            className={`${styles.toggleBtn} ${tab === 'scheduled' ? styles.toggleBtnActive : ''}`}
+            onClick={() => setTab('scheduled')}
           >
-            Guided Tours
+            Scheduled Guided Tours
           </button>
           <button
             role="tab"
-            aria-selected={tab === 'events'}
-            className={`${styles.toggleBtn} ${tab === 'events' ? styles.toggleBtnActive : ''}`}
-            onClick={() => setTab('events')}
+            aria-selected={tab === 'personalized'}
+            className={`${styles.toggleBtn} ${tab === 'personalized' ? styles.toggleBtnActive : ''}`}
+            onClick={() => setTab('personalized')}
           >
-            Other Events
+            Personalized Guided Tours
           </button>
         </div>
 
