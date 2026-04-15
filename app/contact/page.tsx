@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import styles from './page.module.css';
 
 export const metadata = {
@@ -40,6 +41,16 @@ export default function ContactPage() {
             </svg>
             Follow us on Instagram
           </a>
+        </div>
+
+        <div className={styles.photo}>
+          <Image
+            src="/photography/PublicGardens (1).jpg"
+            alt="Public Gardens, Halifax"
+            width={520}
+            height={340}
+            className={styles.photoImg}
+          />
         </div>
       </div>
     </main>

@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "Next.js Dev",
+      "runtimeExecutable": "/usr/local/Cellar/node/25.9.0_1/bin/node",
+      "runtimeArgs": ["/Users/ryan/Documents/Programming/HaliFlocks/haliflocks/node_modules/.bin/next", "dev"],
+      "port": 3000
+    }
+  ]
+}

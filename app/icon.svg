@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="12" fill="#e07b39"/>
+  <!-- lead bird (centre, largest) -->
+  <path d="M32,28 Q23,21 18,23 Q23,26 32,28 Q41,21 46,23 Q41,26 32,28Z" fill="#2c1a0e"/>
+  <!-- left back bird (smaller, lower-left) -->
+  <path d="M20,36 Q14,30 11,32 Q14,34 20,36 Q26,30 29,32 Q26,34 20,36Z" fill="#2c1a0e"/>
+  <!-- right back bird (smallest, lower-right) -->
+  <path d="M44,40 Q39,35 37,37 Q39,39 44,40 Q49,35 51,37 Q49,39 44,40Z" fill="#2c1a0e"/>
+</svg>

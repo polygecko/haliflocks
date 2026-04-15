@@ -146,3 +146,17 @@
   height: 20px;
   flex-shrink: 0;
 }
+
+/* ─── Photo ─────────────────────────────────────────────────── */
+.photo {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.photoImg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
