@@ -17,4 +17,11 @@ collections:
       - { label: Date, name: date, widget: datetime }
       - { label: Location, name: location, widget: string }
       - { label: Description, name: body, widget: markdown }
+      - label: Tour Type
+        name: type
+        widget: select
+        options:
+          - { label: Scheduled Guided Tour, value: scheduled }
+          - { label: Personalized Guided Tour, value: personalized }
+        default: scheduled
       - { label: Featured Image, name: image, widget: image, required: false }

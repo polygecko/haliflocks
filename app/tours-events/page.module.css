@@ -130,11 +130,44 @@
   color: rgba(253, 250, 240, 0.4);
 }
 
+.cardImage {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  max-height: 280px;
+}
+
 .cardBody {
   font-size: 0.975rem;
   font-weight: 300;
   line-height: 1.75;
   color: rgba(253, 250, 240, 0.75);
+}
+
+/* Markdown-rendered HTML inside .cardBody */
+.cardBody :global(p)          { margin: 0 0 0.75em; }
+.cardBody :global(p:last-child) { margin-bottom: 0; }
+.cardBody :global(strong)     { font-weight: 600; color: rgba(253, 250, 240, 0.9); }
+.cardBody :global(em)         { font-style: italic; }
+.cardBody :global(s)          { opacity: 0.5; }
+.cardBody :global(code)       { font-family: monospace; font-size: 0.875em; background: rgba(255,255,255,0.08); padding: 0.1em 0.35em; border-radius: 4px; }
+.cardBody :global(a)          { color: #F5C200; text-decoration: underline; text-underline-offset: 3px; }
+.cardBody :global(a:hover)    { color: #FFD93D; }
+.cardBody :global(ul),
+.cardBody :global(ol)         { padding-left: 1.4em; margin: 0.5em 0; }
+.cardBody :global(li)         { margin: 0.25em 0; }
+.cardBody :global(blockquote) { border-left: 3px solid rgba(245,194,0,0.4); margin: 0.75em 0; padding-left: 1em; opacity: 0.8; font-style: italic; }
+.cardBody :global(h1),
+.cardBody :global(h2),
+.cardBody :global(h3),
+.cardBody :global(h4),
+.cardBody :global(h5),
+.cardBody :global(h6)         { font-family: var(--font-space-grotesk), sans-serif; color: rgba(253, 250, 240, 0.9); margin: 1em 0 0.4em; line-height: 1.3; }
+
+.empty {
+  font-size: 0.975rem;
+  color: rgba(253, 250, 240, 0.45);
+  font-style: italic;
 }
 
 .divider {
