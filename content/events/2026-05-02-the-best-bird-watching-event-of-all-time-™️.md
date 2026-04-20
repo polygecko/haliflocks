@@ -1,41 +1,25 @@
 ---
-title: The Best Bird Watching Event of All Time ™️
-date: 2026-05-02T10:00:00.000-03:00
-location: Point Pleasant Park, Halifax
+title: Free Weekly Bird Tour in the Halifax Public Gardens
+date: 2026-05-20T09:00:00.000-04:00
+location: Halifax Public Gardens (Beginning at the Summer St Entrance of Camp
+  Hill Cemetery)
+type: scheduled
 image: /images/uploads/img_3846.jpeg
 ---
-Let me just say *wow* because this event is going to be **off the hook**. 
+**Join the Halifax Public Gardens Bird Tour**
 
-Here's an example of ~~strikethrough~~. 
+**Every Wednesday Morning**
 
-Here's an example of `code`.
+**7:30 am to 8:30 am**
 
-Here's an [embedded link](https://www.haliflocks.ca/).
+**Beginning at the Camp Hill Cemetery Summer Street Entrance** 
 
-# Heading 1
+**Weekly tours run from May 20 to October 7!** 
 
-## Heading 2
+“A great way to start the day and learn about a wide variety of birds in this city” - Tour Attendee
 
-### Heading 3
+Bring a pair of binoculars if you have them but, more importantly, bring patience and curiosity.
 
-#### Heading 4
+127 wild bird species have been documented as being seen in the Halifax Public Gardens. 
 
-##### Heading 5
-
-###### Heading 6
-
-> Here's a wee little quote
-
-Bullet list:
-
-* birds
-* walks
-* coffee
-* what else do ya want?
-
-Number list
-
-1. blue jay
-2. chickadee
-3. that thing in the tree that's hidden
-4. ~~ducks~~ mallards
+Check out some videos showing you a bit more of what to expect:
