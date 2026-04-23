@@ -1,6 +1,6 @@
 ---
 title: "Bissett Lake Trail Special Tour "
-date: 2026-05-22T09:00:00.000-03:00
+date: 2026-05-23T09:00:00.000-03:00
 location: "Meet in Parking lot of 1182 Cole Harbour Road at Halifax Transit Stop 9010. "
 type: scheduled
 ---
