@@ -1,6 +1,6 @@
 ---
 title: Free Weekly Bird Tour in the Halifax Public Gardens
-date: 2026-05-20T23:09:00.000-03:00
+date: 2026-05-20T07:30:00.000-03:00
 location: Up to and Including October 7! Halifax Public Gardens (Beginning at
   the Summer St Entrance of Camp Hill Cemetery)
 type: scheduled
