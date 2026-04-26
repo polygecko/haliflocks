@@ -8,4 +8,6 @@ Come explore the Bissett Lake Trail and surrounding environs on HaliFlock’s fi
 \
 The guided portion of the tour will run from 9:00 am to 10:30am.
 
+Meet in Parking lot of 1182 Cole Harbour Road at Halifax Transit Stop 9010. 
+
 Rain date is May 24
