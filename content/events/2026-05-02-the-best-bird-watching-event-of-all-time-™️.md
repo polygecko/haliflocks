@@ -21,7 +21,7 @@ According the eBird, 128 wild bird species have been documented in the Halifax P
 
 Check out some videos showing you a bit more of what to expect:
 
-[Halifax Public Gardens Bird Tour Preview 2023](<>)
+[Halifax Public Gardens Bird Tour Preview 2023](https://www.youtube.com/watch?v=lCUOoYQla1M)
 
 [Halifax Public Gardens Bird Tour Preview 2024 ](https://www.youtube.com/watch?v=DlUZ1Sk4XIg)
 
