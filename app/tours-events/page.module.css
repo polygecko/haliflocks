@@ -58,9 +58,39 @@
   letter-spacing: 0.02em;
 }
 
+/* ─── Intro section ─────────────────────────────────────────── */
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: clamp(0.92rem, 2.5vw, 1rem);
+  font-weight: 300;
+  line-height: 1.8;
+  color: rgba(253, 250, 240, 0.75);
+}
+
+.intro strong {
+  font-weight: 600;
+  color: rgba(253, 250, 240, 0.9);
+}
+
+.intro ul {
+  padding-left: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  list-style: disc;
+}
+
+.introHighlight {
+  font-weight: 500;
+  color: var(--yellow);
+}
+
 /* ─── Toggle ────────────────────────────────────────────────── */
 .toggleWrap {
   display: inline-flex;
+  align-self: flex-start;
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(245, 194, 0, 0.2);
   border-radius: 10px;

@@ -12,6 +12,7 @@
 
 html {
   height: 100%;
+  scrollbar-gutter: stable;
 }
 
 html,
@@ -45,5 +46,45 @@ a {
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
+  }
+}
+
+/* ─── PayPal button corner clip ─────────────────────────────── */
+#paypal-container-VSHFPWFF2PCMJ iframe {
+  clip-path: inset(0 round 24px);
+}
+
+/* ─── Side support tab (desktop only) ──────────────────────── */
+.support-tab {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .support-tab {
+    display: block;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-family: var(--font-space-grotesk), Arial, sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #0F2E6B;
+    background: #F5C200;
+    padding: 1.1rem 0.55rem;
+    border-radius: 6px 0 0 6px;
+    z-index: 200;
+    transition: background 0.2s ease, padding 0.2s ease;
+    white-space: nowrap;
+  }
+
+  .support-tab:hover {
+    background: #FFD93D;
+    padding-left: 1rem;
   }
 }

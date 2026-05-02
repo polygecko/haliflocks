@@ -2,7 +2,7 @@ import Image from 'next/image';
 import styles from './page.module.css';
 
 export const metadata = {
-  title: 'Contact — HaliFlocks',
+  title: 'Contact',
 };
 
 export default function ContactPage() {
