@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from './page.module.css';
 import PayPalButton from './components/PayPalButton';
+import PhotoCarousel from './components/PhotoCarousel';
 
 export const metadata = {
   title: { absolute: 'HaliFlocks: Join The Flock' },
@@ -97,6 +98,10 @@ export default function Home() {
           </div>
 
         </section>
+
+        <div className={styles.divider} />
+
+        <PhotoCarousel />
 
         <div className={styles.divider} />
 
