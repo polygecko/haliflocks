@@ -98,6 +98,39 @@ export default function Home() {
 
         </section>
 
+        <div className={styles.divider} />
+
+        <section className={styles.newsCoverage}>
+          <h2 className={styles.newsCoverageHeader}>News Coverage</h2>
+          <div className={styles.newsGrid}>
+
+            <Link href="https://www.halifaxexaminer.ca/birds-are-the-teachers-learning-about-the-environment-through-birdwatching/" className={styles.newsCard}>
+              <div className={styles.newsCardImage} />
+              <div className={styles.newsCardBody}>
+                <p className={styles.newsCardTitle}>&lsquo;Birds are the teachers&rsquo;: Learning about the environment through birdwatching</p>
+                <p className={styles.newsCardByline}>Suzanne Rent &mdash; Halifax Examiner</p>
+              </div>
+            </Link>
+
+            <Link href="https://issuu.com/discoverhalifaxns/docs/halifax_visitor_guide_2025/32" className={styles.newsCard}>
+              <div className={styles.newsCardImage} />
+              <div className={styles.newsCardBody}>
+                <p className={styles.newsCardTitle}>Birdwatching in the City in Discover Halifax&rsquo;s Visitors&rsquo; Guide</p>
+                <p className={styles.newsCardByline}>Wesley Petite &mdash; Discover Halifax</p>
+              </div>
+            </Link>
+
+            <Link href="https://www.saltwire.com/atlantic-canada/john-demont-finding-calm-and-context-among-the-birds-of-the-halifax-public-gardens-101001166" className={styles.newsCard}>
+              <div className={styles.newsCardImage} />
+              <div className={styles.newsCardBody}>
+                <p className={styles.newsCardTitle}><em>Finding calm and context among the birds of the Halifax Public Gardens</em></p>
+                <p className={styles.newsCardByline}>John DeMont &mdash; SaltWire</p>
+              </div>
+            </Link>
+
+          </div>
+        </section>
+
       </div>
 
       <section id="support" className={styles.supportSection}>
