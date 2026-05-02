@@ -16,8 +16,11 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "HaliFlocks — Coming Soon",
-  description: "A Halifax birding community. Coming soon.",
+  title: {
+    default: "HaliFlocks: Join The Flock",
+    template: "HaliFlocks | %s",
+  },
+  description: "A hub for the growing birder community of Halifax and beyond.",
 };
 
 export default function RootLayout({
@@ -28,6 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${dmSans.variable} ${spaceGrotesk.variable}`}>
       <body>
+        <a href="/#support" className="support-tab">Support HaliFlocks</a>
         <Navbar />
         {children}
       </body>

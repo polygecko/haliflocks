@@ -1,9 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './page.module.css';
+import PayPalButton from './components/PayPalButton';
 
 export const metadata = {
-  title: 'HaliFlocks — Halifax Birding Community',
+  title: { absolute: 'HaliFlocks: Join The Flock' },
   description: 'A hub for the growing birder community of Halifax and beyond.',
 };
 
@@ -63,11 +64,11 @@ export default function Home() {
         <section className={styles.defSection}>
 
           <div className={styles.defEntry}>
+            <h2 className={styles.defHeadword}>HaliFlocks</h2>
             <div className={styles.defHeader}>
+              <span className={styles.partOfSpeech}>proper noun</span>
               <span className={styles.pronunciation}>HAL-ih-flo:ks</span>
             </div>
-            <h2 className={styles.defHeadword}>HaliFlocks</h2>
-            <span className={styles.partOfSpeech}>proper noun</span>
             <div className={styles.defBody}>
               <p>HaliFlocks is a reference to the many breathtaking birding opportunities in this awesome city and surrounding region. These opportunities are being realized by a growing community of people flocking around an interest in birds.</p>
               <p>Hali-flocks can also be thought of as an abbreviated reference to the well-known fact that Haligonians flock! More and more people in Halifax are taking part in the age-old custom of birding and having fun witnessing bird behaviour together. While birding solo comes with its own gratification, birding together comes with a special feeling of collective learning. In HaliFlocks tours, you will meet passionately educated guides with encyclopedic knowledge on many of the birds you will encounter.</p>
@@ -98,6 +99,10 @@ export default function Home() {
         </section>
 
       </div>
+
+      <section id="support" className={styles.supportSection}>
+        <PayPalButton />
+      </section>
 
       <footer className={styles.footer}>
         Halifax, Nova Scotia &mdash; Est. 2025
