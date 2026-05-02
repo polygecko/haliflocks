@@ -1,0 +1,197 @@
+/* ─── Page shell ────────────────────────────────────────────── */
+.body {
+  --yellow: #F5C200;
+  --yellow-dark: #D4A800;
+  --yellow-light: #FFF3B0;
+  --blue: #1A4FA0;
+  --blue-dark: #0F2E6B;
+  --white: #FDFAF0;
+
+  background-color: var(--blue-dark);
+  color: var(--white);
+  font-family: var(--font-dm-sans), sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 2rem 5rem;
+}
+
+/* ─── Glow ──────────────────────────────────────────────────── */
+.glow {
+  position: fixed;
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(245, 194, 0, 0.12) 0%, transparent 70%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ─── Content wrapper ───────────────────────────────────────── */
+.container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 760px;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  animation: fadeUp 0.7s ease both;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── Heading ───────────────────────────────────────────────── */
+.heading {
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-size: clamp(1.8rem, 5vw, 2.75rem);
+  font-weight: 700;
+  color: var(--yellow);
+  letter-spacing: 0.02em;
+}
+
+/* ─── Divider ───────────────────────────────────────────────── */
+.divider {
+  width: 48px;
+  height: 2px;
+  background: var(--yellow);
+  opacity: 0.35;
+  border-radius: 2px;
+}
+
+/* ─── Intro ─────────────────────────────────────────────────── */
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  font-size: clamp(0.92rem, 2.5vw, 1rem);
+  font-weight: 300;
+  line-height: 1.8;
+  color: rgba(253, 250, 240, 0.75);
+}
+
+/* ─── Grid ──────────────────────────────────────────────────── */
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ─── Card ──────────────────────────────────────────────────── */
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(245, 194, 0, 0.15);
+  border-radius: 12px;
+  padding: 1.75rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.card:hover {
+  border-color: rgba(245, 194, 0, 0.3);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.cardTitle {
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--yellow);
+}
+
+.cardTag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(253, 250, 240, 0.4);
+}
+
+.cardDesc {
+  font-size: 0.975rem;
+  font-weight: 300;
+  line-height: 1.75;
+  color: rgba(253, 250, 240, 0.75);
+}
+
+.cardDesc b {
+  font-weight: 700;
+}
+
+/* ─── How to play ───────────────────────────────────────────── */
+.cardHow {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-top: 1px solid rgba(245, 194, 0, 0.1);
+  padding-top: 1rem;
+}
+
+.cardHowLabel {
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(253, 250, 240, 0.35);
+}
+
+.cardHowList {
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  list-style: decimal;
+  font-size: 0.9rem;
+  font-weight: 300;
+  line-height: 1.65;
+  color: rgba(253, 250, 240, 0.6);
+}
+
+/* ─── Card link ─────────────────────────────────────────────── */
+.cardLink {
+  align-self: flex-start;
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--yellow);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.cardLink:hover {
+  color: #FFD93D;
+}
+
+/* ─── Link list (Other Birdles) ─────────────────────────────── */
+.linkList {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+/* ─── Responsive ────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .card {
+    padding: 1.4rem 1.25rem;
+  }
+}
