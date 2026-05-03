@@ -2,7 +2,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from './page.module.css';
 import PayPalButton from './components/PayPalButton';
-import PhotoCarousel from './components/PhotoCarousel';
 
 export const metadata = {
   title: { absolute: 'HaliFlocks: Join The Flock' },
@@ -91,17 +90,13 @@ export default function Home() {
             <p className={styles.defNote}>Birding can be enjoyed in your backyards, everyday routines, roaming rambles, and guided tours!</p>
             <div className={styles.defSep} />
             <div className={styles.defBody}>
-              <p>Not everyone identifies as being from Halifax or a Haligonian. Halifax Regional Municipality is made up of a diverse range of communities, each with own history, associations, and assets. HaliFlocks seeks to explore respectfully the many distinct communities that make up the area now called Halifax.</p>
+              <p>Not everyone identifies as being from Halifax or a Haligonian. Halifax Regional Municipality is made up of a diverse range of communities, each with it's own history, associations, and assets. HaliFlocks seeks to explore respectfully the many distinct communities that make up the area now called Halifax.</p>
               <p>With respect for the varied histories of Halifax communities that we have so much to learn from, HaliFlocks gathers around the important lessons that we can learn from nature. By considering what can be learned by those that came before us, birding can foster an appreciation for historical annual migrations, bird adaptation, and cohabitation.</p>
               <p>HaliFlocks is a migratory group and will at times even chart birding expeditions across Nova Scotia (we haven&rsquo;t come up with a play on words for Nova Scotia yet). Visit the <Link href="/tours-events" className={styles.defLink}>Bird Tours tab</Link> to learn more about how to attend HaliFlocks tours.</p>
             </div>
           </div>
 
         </section>
-
-        <div className={styles.divider} />
-
-        <PhotoCarousel />
 
         <div className={styles.divider} />
 
@@ -118,7 +113,7 @@ export default function Home() {
             </Link>
 
             <Link href="https://issuu.com/discoverhalifaxns/docs/halifax_visitor_guide_2025/32" className={styles.newsCard}>
-              <div className={styles.newsCardImage} />
+              <div className={styles.newsCardImage} style={{ backgroundImage: 'url(/images/discover-halifax-visitor-guide.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }} />
               <div className={styles.newsCardBody}>
                 <p className={styles.newsCardTitle}>Birdwatching in the City in Discover Halifax&rsquo;s Visitors&rsquo; Guide</p>
                 <p className={styles.newsCardByline}>Wesley Petite &mdash; Discover Halifax</p>

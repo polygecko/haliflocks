@@ -1,5 +1,6 @@
 import styles from './page.module.css';
 import EventTabs from './EventTabs';
+import PhotoCarousel from '@/app/components/PhotoCarousel';
 import { getEvents } from '@/lib/events';
 
 export const metadata = {
@@ -19,6 +20,8 @@ export default async function ToursEventsPage() {
         <h1 className={styles.heading}>Tours &amp; Events</h1>
 
         <div className={styles.divider} />
+
+        <PhotoCarousel />
 
         <section className={styles.intro}>
           <p>HaliFlocks tours are designed to be low barrier for all participants. Tours are enjoyable for people of all levels of experience, age, and background.</p>

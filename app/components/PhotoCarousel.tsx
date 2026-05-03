@@ -26,7 +26,7 @@ export default function PhotoCarousel() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrent(i => (i + 1) % images.length);
-    }, 3000);
+    }, 4000);
     return () => clearInterval(timer);
   }, []);
 
