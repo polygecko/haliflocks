@@ -13,9 +13,9 @@ image: /images/uploads/img_3846.jpeg
 
 **Weekly tours run from May 20 to October 7!** 
 
-Bring a pair of binoculars if you have them but, more importantly, bring patience and curiosity.
+Bring a pair of binoculars if you have them and, more importantly, bring patience and curiosity.
 
-According the eBird, 128 wild bird species have been documented in the Halifax Public Gardens. 
+According to eBird, 129 wild bird species have been documented in the Halifax Public Gardens. 
 
 “A great way to start the day and learn about a wide variety of birds in this city” - Tour Attendee/Future You
 
