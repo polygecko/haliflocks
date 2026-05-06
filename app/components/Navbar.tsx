@@ -45,7 +45,7 @@ export default function Navbar() {
             )}
           </li>
         ))}
-        <li>
+        <li className={styles.supportItem}>
           <a href="/#support" className={`${styles.link} ${styles.supportLink}`} onClick={() => setOpen(false)}>
             Support
           </a>
