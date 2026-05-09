@@ -105,7 +105,7 @@ export default function Home() {
           <div className={styles.newsGrid}>
 
             <Link href="https://www.halifaxexaminer.ca/birds-are-the-teachers-learning-about-the-environment-through-birdwatching/" className={styles.newsCard}>
-              <div className={styles.newsCardImage} />
+              <div className={styles.newsCardImage} style={{ backgroundImage: 'url(/images/BirdsaretheTeachers.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }} />
               <div className={styles.newsCardBody}>
                 <p className={styles.newsCardTitle}>&lsquo;Birds are the teachers&rsquo;: Learning about the environment through birdwatching</p>
                 <p className={styles.newsCardByline}>Suzanne Rent &mdash; Halifax Examiner</p>
@@ -121,7 +121,7 @@ export default function Home() {
             </Link>
 
             <Link href="https://www.saltwire.com/atlantic-canada/john-demont-finding-calm-and-context-among-the-birds-of-the-halifax-public-gardens-101001166" className={styles.newsCard}>
-              <div className={styles.newsCardImage} />
+              <div className={styles.newsCardImage} style={{ backgroundImage: 'url(/images/IMG_9747.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }} />
               <div className={styles.newsCardBody}>
                 <p className={styles.newsCardTitle}><em>Finding calm and context among the birds of the Halifax Public Gardens</em></p>
                 <p className={styles.newsCardByline}>John DeMont &mdash; SaltWire</p>

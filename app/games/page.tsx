@@ -49,7 +49,8 @@ export default function GamesPage() {
         </div>
 
         <div className={styles.card}>
-          <h2 className={styles.cardTitle}>Birder Mystery Table Tap Game</h2>
+          <div className={styles.cardImage} style={{ backgroundImage: 'url(/images/birder-mystery-cover.jpg)' }} />
+          <h2 className={styles.cardTitle}>Birder Mystery Table Top Game</h2>
           <p className={styles.cardDesc}>
             Birder Mystery engages you and your friends as a team of detectives charged with
             identifying the specific birds that have committed heinous crimes! This is a HaliFlocks
@@ -57,6 +58,24 @@ export default function GamesPage() {
             engaging way. Get in touch if you are interested in solving any of the below{' '}
             <i><b>Birder Mysteries</b></i>!
           </p>
+          <div className={styles.mysteryGrid}>
+            <figure className={styles.mysteryItem}>
+              <div className={styles.mysteryImg} style={{ backgroundImage: 'url(/images/OnCampus.jpg)' }} />
+              <figcaption className={styles.mysteryCaption}>#1 Getting Sh*tfaced on Campus</figcaption>
+            </figure>
+            <figure className={styles.mysteryItem}>
+              <div className={styles.mysteryImg} style={{ backgroundImage: 'url(/images/MurdersHarvest.jpg)' }} />
+              <figcaption className={styles.mysteryCaption}>#2 A Murder&rsquo;s Harvest</figcaption>
+            </figure>
+            <figure className={styles.mysteryItem}>
+              <div className={styles.mysteryImg} style={{ backgroundImage: 'url(/images/bird-in-the-sand.jpg)' }} />
+              <figcaption className={styles.mysteryCaption}>#3 Birder in Paradise &ndash; A Bird in the Sand is Worth Two in the Bush</figcaption>
+            </figure>
+            <figure className={styles.mysteryItem}>
+              <div className={styles.mysteryImg} style={{ backgroundImage: 'url(/images/up-a-creek.jpg)' }} />
+              <figcaption className={styles.mysteryCaption}>#4 Up the Creek Without a Wattle</figcaption>
+            </figure>
+          </div>
         </div>
 
         <div className={styles.card}>
