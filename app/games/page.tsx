@@ -37,6 +37,7 @@ export default function GamesPage() {
 
         <div className={styles.card}>
           <h2 className={styles.cardTitle}>HaliFlocks SuDucko</h2>
+          <p className={styles.cardDesc}>Want to take a brake or exercise your brain with more than just numbers? Add some ducks!</p>
           <a
             href="https://claude.ai/public/artifacts/39936192-37bb-4868-9693-6f9cefcbb49c"
             target="_blank"
