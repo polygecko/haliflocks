@@ -37,49 +37,6 @@ export default async function ToursEventsPage() {
           <p>Special tour rain dates, unless otherwise stated, will be the day following the scheduled tour. Come back to the website or view the HaliFlocks Instagram Story for updates on tour scheduling and status.</p>
         </section>
 
-        <section className={styles.birdWeek}>
-          <div className={styles.birdWeekHeader}>
-            <p className={styles.birdWeekLabel}>Featured Event</p>
-            <h2 className={styles.birdWeekTitle}>Halifax Bird Week 2026</h2>
-            <p className={styles.birdWeekDates}>May 24–30, 2026</p>
-          </div>
-          <a
-            href="https://forms.gle/72sYLK6MHMcwKRo1A"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.birdWeekImageLink}
-          >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/images/Website%20Pics%20113A96E8.jpg"
-              alt="Halifax Bird Week 2026"
-              className={styles.birdWeekImage}
-            />
-            <span className={styles.birdWeekImageOverlay}>Register Now</span>
-          </a>
-          <p className={styles.birdWeekBody}>
-            Seven days of guided bird walks and educational events across all of Halifax Regional Municipality — welcoming birders of every level. HaliFlocks is proud to participate in this city-wide celebration of birds organized by Bird Friendly Halifax.
-          </p>
-          <div className={styles.birdWeekActions}>
-            <a
-              href="https://forms.gle/72sYLK6MHMcwKRo1A"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.birdWeekCta}
-            >
-              Register for Halifax Bird Week →
-            </a>
-            <a
-              href="https://naturens.ca/events/2026halifaxbirdweek/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.birdWeekCtaSecondary}
-            >
-              More info about Halifax Bird Week →
-            </a>
-          </div>
-        </section>
-
         <EventTabs scheduled={scheduled} personalized={personalized} />
       </div>
     </main>
