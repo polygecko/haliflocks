@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { DM_Sans, Space_Grotesk } from "next/font/google";
 import Navbar from "./components/Navbar";
+import RareBirdBanner from "./components/RareBirdBanner";
 import "./globals.css";
 
 const dmSans = DM_Sans({
@@ -39,6 +40,7 @@ export default function RootLayout({
         <a href="/#support" className="support-tab">Support HaliFlocks</a>
         <Navbar />
         {children}
+        <RareBirdBanner />
       </body>
     </html>
   );

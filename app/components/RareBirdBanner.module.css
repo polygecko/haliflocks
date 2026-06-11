@@ -1,0 +1,248 @@
+/* ─── Side tab (desktop only) ───────────────────────────────── */
+/* Sits on the right edge directly above the "Support HaliFlocks" tab (which is
+   vertically centred with a ~95px half-height). Always visible; toggles the
+   banner open/closed. */
+.tab {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    position: fixed;
+    right: 0;
+    bottom: calc(50% + 110px); /* clears the centred Support tab above it */
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+
+    font-family: var(--font-space-grotesk), Arial, sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #F5C200;
+
+    background: rgba(15, 46, 107, 0.92);
+    border: 1px solid rgba(245, 194, 0, 0.35);
+    border-right: none;
+    border-radius: 6px 0 0 6px;
+    padding: 1.1rem 0.55rem;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    z-index: 200;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.2s ease, padding 0.2s ease;
+  }
+
+  .tab:hover {
+    background: rgba(15, 46, 107, 1);
+    padding-left: 1rem;
+  }
+}
+
+/* ─── Rare bird alert banner ────────────────────────────────── */
+/* Floats at the bottom of the viewport on every route, clear of the fixed
+   navbar (top) and the vertical support tab (right, desktop). */
+.banner {
+  position: fixed;
+  left: 1rem;
+  bottom: 1rem;
+  z-index: 150;
+  width: min(360px, calc(100vw - 2rem));
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  padding: 0.7rem 0.85rem;
+
+  font-family: var(--font-dm-sans), Arial, sans-serif;
+  color: #FDFAF0;
+  background: rgba(15, 46, 107, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(245, 194, 0, 0.35);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+
+  animation: rba-rise 0.35s ease both;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+@keyframes rba-rise {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.flag {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.flagTop {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-space-grotesk), var(--font-dm-sans), sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #F5C200;
+  white-space: nowrap;
+}
+
+.attribution {
+  font-size: 0.66rem;
+  color: rgba(253, 250, 240, 0.55);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.attribution:hover {
+  color: rgba(253, 250, 240, 0.85);
+  text-decoration: underline;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  /* Cap the expanded list so a busy week never overflows the screen. */
+  max-height: 44vh;
+  overflow-y: auto;
+}
+
+.list li {
+  /* Faint divider between sightings when expanded. */
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(245, 194, 0, 0.12);
+}
+
+.list li:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.sighting {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  min-width: 0; /* allow truncation inside flex */
+  text-decoration: none;
+  color: inherit;
+}
+
+.sighting:hover .species {
+  text-decoration: underline;
+}
+
+.species {
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.detail {
+  font-size: 0.74rem;
+  line-height: 1.2;
+  color: rgba(253, 250, 240, 0.62);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.expand {
+  font-family: inherit;
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: #F5C200;
+  background: transparent;
+  border: 1px solid rgba(245, 194, 0, 0.3);
+  border-radius: 999px;
+  padding: 0.2rem 0.6rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s ease;
+}
+
+.expand:hover {
+  background: rgba(245, 194, 0, 0.12);
+}
+
+.viewAll {
+  font-size: 0.7rem;
+  color: rgba(253, 250, 240, 0.55);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.viewAll:hover {
+  color: rgba(253, 250, 240, 0.85);
+  text-decoration: underline;
+}
+
+.close {
+  flex: none;
+  width: 1.6rem;
+  height: 1.6rem;
+  display: grid;
+  place-items: center;
+  font-size: 1.2rem;
+  line-height: 1;
+  color: rgba(253, 250, 240, 0.7);
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.close:hover {
+  color: #FDFAF0;
+  background: rgba(245, 194, 0, 0.12);
+}
+
+/* On narrow screens, stretch into a full-width bottom strip. */
+@media (max-width: 600px) {
+  .banner {
+    left: 0.5rem;
+    right: 0.5rem;
+    bottom: 0.5rem;
+    width: auto;
+    padding: 0.6rem 0.7rem;
+  }
+
+  /* The full sightings list is too much on a phone — keep it to the latest
+     sighting and send people to eBird for the rest. */
+  .expand {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .banner {
+    animation: none;
+  }
+}
