@@ -3,6 +3,7 @@ title: Amherst Shore Provincial Park Migratory Event
 date: 2026-07-18T09:00:00.000-03:00
 location: Meet at the former site of Craig's Grocer (6528 NS-366, Northport)
 type: scheduled
+image: /images/uploads/img_1284-1-1-.jpeg
 ---
 Come explore the warbler and thrush filled trees of Amherst Shore Provincial Park on HaliFlock's first migratory event tour outside of HRM!
 
