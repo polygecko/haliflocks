@@ -18,8 +18,9 @@
   justify-content: flex-start;
   overflow-x: hidden;
   position: relative;
-  padding-top: 60px;
+  padding-top: calc(60px + var(--banner-height, 0px));
   padding-bottom: 5rem;
+  transition: padding-top 0.25s ease;
 }
 
 /* ─── Background chevron pattern ───────────────────────────── */
@@ -103,7 +104,7 @@
 }
 
 .logo {
-  width: clamp(300px, 75vw, 540px);
+  width: clamp(150px, 37.5vw, 270px);
   height: auto;
   filter: drop-shadow(0 6px 40px rgba(245, 194, 0, 0.35));
 }
@@ -407,6 +408,14 @@
   color: rgba(253, 250, 240, 0.25);
   letter-spacing: 0.12em;
   text-transform: uppercase;
+}
+
+.footer p {
+  margin: 0.35rem 0 0;
+}
+
+.footer p:first-child {
+  margin-top: 0;
   animation: fadeUp 1s ease 0.7s both;
   padding-bottom: 1.5rem;
 }

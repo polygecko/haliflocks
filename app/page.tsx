@@ -1,7 +1,7 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import styles from './page.module.css';
 import PayPalButton from './components/PayPalButton';
+import HomeLogo from './components/HomeLogo';
 
 export const metadata = {
   title: { absolute: 'HaliFlocks: Join The Flock' },
@@ -44,16 +44,7 @@ export default function Home() {
       {/* Main content */}
       <div className={styles.container}>
 
-        <div className={styles.logoWrap}>
-          <Image
-            src="/final-logo-transparent.png"
-            alt="HaliFlocks"
-            width={360}
-            height={360}
-            priority
-            className={styles.logo}
-          />
-        </div>
+        <HomeLogo />
 
         <div className={styles.wordmark}>
           <p className={styles.sub}>a hub for the growing birder community of Halifax and beyond</p>
@@ -138,7 +129,9 @@ export default function Home() {
       </section>
 
       <footer className={styles.footer}>
-        Halifax, Nova Scotia &mdash; Est. 2025
+        <p>Halifax, Nova Scotia &mdash; Est. 2025</p>
+        <p>Logo design by Ok Island</p>
+        <p>Website by Oliver Osborne</p>
       </footer>
 
     </main>

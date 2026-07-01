@@ -18,6 +18,21 @@ const images = [
   '/photography/PublicGardens (1).jpg',
   '/photography/att.KKxSDhRVm9j2dHAZR8lL2Eq0bK8s4RrUtSgl_rN_S8w.jpg',
   '/photography/mostsmiles.jpeg',
+  '/photography/website-pic-0202.jpeg',
+  '/photography/website-pic-0342.jpg',
+  '/photography/website-pic-0421.jpg',
+  '/photography/website-pic-0441.jpg',
+  '/photography/website-pic-1284.jpeg',
+  '/photography/website-pic-1289.jpeg',
+  '/photography/website-pic-9095.jpg',
+  '/photography/website-pics-1.jpg',
+  '/photography/website-pics-0299.jpg',
+  '/photography/website-pics-img-0111.jpeg',
+  '/photography/website-pics-img-0151.jpeg',
+  '/photography/website-pics-img-0323.jpeg',
+  '/photography/website-pics-image-1.jpg',
+  '/photography/website-pics-image.jpg',
+  '/photography/website-pics.jpg',
 ];
 
 export default function PhotoCarousel() {

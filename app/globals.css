@@ -1,6 +1,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --banner-height: 0px;
 }
 
 @media (prefers-color-scheme: dark) {

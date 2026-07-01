@@ -7,30 +7,41 @@ import styles from './RareBirdBanner.module.css';
 
 const TOGGLE_EVENT = 'haliflocks:rareBirdAlert:toggle';
 const MOBILE_QUERY = '(max-width: 600px)';
+const STORAGE_KEY = 'haliflocks:rareBirdAlert:userToggled';
 
-// Whether the banner is open, as an in-memory session flag shared across the
-// layout via a tiny external store. The side tab is desktop-only, so the
-// default differs by viewport: on mobile (no tab) the banner starts *open* and
-// is simply dismissible; on desktop it starts *closed* and is opened via the
-// tab. Once the user explicitly toggles it, that choice wins on either size.
-let userToggled: boolean | null = null;
+// Whether the banner is open. The side tab is desktop-only, so the default
+// differs by viewport: on mobile (no tab) the banner starts *open* and is
+// simply dismissible; on desktop it starts *closed* and is opened via the
+// tab. Once the user explicitly toggles it, that choice wins on either size —
+// persisted in localStorage (not just in-memory) so a dismissal survives the
+// full-page reloads the site's plain <a> nav links cause; otherwise the
+// banner reappeared on every navigation, making "close" look broken.
+function getUserToggled(): boolean | null {
+  const raw = localStorage.getItem(STORAGE_KEY);
+  if (raw === '1') return true;
+  if (raw === '0') return false;
+  return null;
+}
 
 function isBannerOpen(): boolean {
+  const userToggled = getUserToggled();
   if (userToggled !== null) return userToggled;
   return window.matchMedia(MOBILE_QUERY).matches;
 }
 
 function setBannerOpen(next: boolean): void {
-  userToggled = next;
+  localStorage.setItem(STORAGE_KEY, next ? '1' : '0');
   window.dispatchEvent(new Event(TOGGLE_EVENT));
 }
 
 function subscribe(callback: () => void): () => void {
   window.addEventListener(TOGGLE_EVENT, callback);
+  window.addEventListener('storage', callback);
   const mq = window.matchMedia(MOBILE_QUERY);
   mq.addEventListener('change', callback);
   return () => {
     window.removeEventListener(TOGGLE_EVENT, callback);
+    window.removeEventListener('storage', callback);
     mq.removeEventListener('change', callback);
   };
 }

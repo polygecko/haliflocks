@@ -1,10 +1,11 @@
 /* ─── Navbar ────────────────────────────────────────────────── */
 .nav {
   position: fixed;
-  top: 0;
+  top: var(--banner-height, 0px);
   left: 0;
   right: 0;
   z-index: 100;
+  transition: top 0.25s ease;
   display: flex;
   align-items: center;
   justify-content: space-between;
