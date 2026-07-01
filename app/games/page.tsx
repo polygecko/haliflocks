@@ -73,7 +73,7 @@ export default function GamesPage() {
             </figure>
             <figure className={styles.mysteryItem}>
               <div className={styles.mysteryImg} style={{ backgroundImage: 'url(/images/up-a-creek.jpg)' }} />
-              <figcaption className={styles.mysteryCaption}>#4 Up the Creek Without a Wattle</figcaption>
+              <figcaption className={styles.mysteryCaption}>#4 Birder in Paradise 2 &ndash; Up the Creek Without a Wattle</figcaption>
             </figure>
           </div>
         </div>
