@@ -3,6 +3,7 @@ title: Hartlen Point and MacCormacks Beach Special Event
 date: 2026-08-15T09:00:00.000-03:00
 location: Meet on Shore Road just before Hartlen Point Golf Course Parking Lot
 type: scheduled
+image: /images/uploads/attach0.jpg
 ---
 Join us for this special tour of the internationally renowned **birding hotspot** Hartlen Point! We'll also be checking out MacCormacks Beach to practice some gull differentiation, if time allows
 
