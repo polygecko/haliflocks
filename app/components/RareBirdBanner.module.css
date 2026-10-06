@@ -44,6 +44,44 @@
   }
 }
 
+/* ─── Reopen affordance (no-tab viewports only, <900px) ─────── */
+/* Replaces the side tab where there's no room for one. A small pill
+   bottom-right so it stays clear of the full-width banner it reopens and of
+   browser chrome (e.g. iOS Safari's bottom bar). */
+.reopen {
+  display: none;
+}
+
+@media (max-width: 899px) {
+  .reopen {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    position: fixed;
+    right: 0.75rem;
+    bottom: 0.75rem;
+    z-index: 150;
+
+    font-family: var(--font-space-grotesk), Arial, sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #F5C200;
+
+    background: rgba(15, 46, 107, 0.92);
+    border: 1px solid rgba(245, 194, 0, 0.35);
+    border-radius: 999px;
+    padding: 0.55rem 0.9rem;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+
+    cursor: pointer;
+    white-space: nowrap;
+  }
+}
+
 /* ─── Rare bird alert banner ────────────────────────────────── */
 /* Floats at the bottom of the viewport on every route, clear of the fixed
    navbar (top) and the vertical support tab (right, desktop). */
