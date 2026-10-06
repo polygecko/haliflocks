@@ -96,6 +96,11 @@ export default function GamesPage() {
                 birdlegame.com →
               </a>
             </li>
+            <li>
+              <a href="https://birdiegame.net/" target="_blank" rel="noopener noreferrer" className={styles.cardLink}>
+                birdiegame.net →
+              </a>
+            </li>
           </ul>
         </div>
       </div>

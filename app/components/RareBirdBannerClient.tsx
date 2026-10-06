@@ -6,16 +6,20 @@ import { EBIRD_REGION } from '@/lib/rareBirds';
 import styles from './RareBirdBanner.module.css';
 
 const TOGGLE_EVENT = 'haliflocks:rareBirdAlert:toggle';
-const MOBILE_QUERY = '(max-width: 600px)';
+// Matches the CSS breakpoint (RareBirdBanner.module.css) below which the side
+// tab is hidden. Must stay in sync with that media query — it's what decides
+// whether a visitor has any way to reopen the banner besides this default.
+const NO_TAB_QUERY = '(max-width: 899px)';
 const STORAGE_KEY = 'haliflocks:rareBirdAlert:userToggled';
 
-// Whether the banner is open. The side tab is desktop-only, so the default
-// differs by viewport: on mobile (no tab) the banner starts *open* and is
-// simply dismissible; on desktop it starts *closed* and is opened via the
-// tab. Once the user explicitly toggles it, that choice wins on either size —
-// persisted in localStorage (not just in-memory) so a dismissal survives the
-// full-page reloads the site's plain <a> nav links cause; otherwise the
-// banner reappeared on every navigation, making "close" look broken.
+// Whether the banner is open. The side tab only exists at >=900px, so the
+// default differs by viewport: below that (phones and tablets, no tab) the
+// banner starts *open* and is simply dismissible; at >=900px it starts
+// *closed* and is opened via the tab. Once the user explicitly toggles it,
+// that choice wins on either size — persisted in localStorage (not just
+// in-memory) so a dismissal survives the full-page reloads the site's plain
+// <a> nav links cause; otherwise the banner reappeared on every navigation,
+// making "close" look broken.
 function getUserToggled(): boolean | null {
   const raw = localStorage.getItem(STORAGE_KEY);
   if (raw === '1') return true;
@@ -23,10 +27,14 @@ function getUserToggled(): boolean | null {
   return null;
 }
 
+function hasNoTab(): boolean {
+  return window.matchMedia(NO_TAB_QUERY).matches;
+}
+
 function isBannerOpen(): boolean {
   const userToggled = getUserToggled();
   if (userToggled !== null) return userToggled;
-  return window.matchMedia(MOBILE_QUERY).matches;
+  return hasNoTab();
 }
 
 function setBannerOpen(next: boolean): void {
@@ -37,7 +45,7 @@ function setBannerOpen(next: boolean): void {
 function subscribe(callback: () => void): () => void {
   window.addEventListener(TOGGLE_EVENT, callback);
   window.addEventListener('storage', callback);
-  const mq = window.matchMedia(MOBILE_QUERY);
+  const mq = window.matchMedia(NO_TAB_QUERY);
   mq.addEventListener('change', callback);
   return () => {
     window.removeEventListener(TOGGLE_EVENT, callback);
@@ -93,6 +101,22 @@ export default function RareBirdBannerClient({ birds }: { birds: RareBird[] }) {
       >
         Rare Bird Alert
       </button>
+
+      {/* Reopen affordance for viewports with no side tab (<900px). Without
+          this, a dismissal on phone/tablet was permanent — nothing on screen
+          could bring the banner back short of clearing site storage. */}
+      {!open && (
+        <button
+          type="button"
+          className={styles.reopen}
+          onClick={() => setBannerOpen(true)}
+          aria-expanded={open}
+          aria-controls="rare-bird-alert"
+          aria-label="Show rare bird alert"
+        >
+          <span aria-hidden="true">🦅</span> Rare Bird Alert
+        </button>
+      )}
 
       {open && (
         <aside
