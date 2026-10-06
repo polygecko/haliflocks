@@ -38,6 +38,29 @@ export default async function ToursEventsPage() {
         </section>
 
         <EventTabs scheduled={scheduled} personalized={personalized} />
+
+        <section className={styles.collaborators}>
+          <div className={styles.divider} />
+          <h2 className={styles.collaboratorsHeading}>Our Collaborators</h2>
+          <div className={styles.collaboratorsGrid}>
+            <div className={styles.collaboratorTile}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/tantramar-seniors-college-logo.png"
+                alt="Tantramar Seniors College"
+                className={styles.collaboratorLogo}
+              />
+            </div>
+            <div className={styles.collaboratorTile}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/friends-of-the-public-gardens-logo.png"
+                alt="The Friends of the Public Gardens"
+                className={styles.collaboratorLogo}
+              />
+            </div>
+          </div>
+        </section>
       </div>
     </main>
   );
